@@ -1,0 +1,159 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+    <!-- ========================= SECTION CONTENT ========================= -->
+    <section class="section-content padding-y">
+        <div class="container" style="max-width: 720px;">
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-3">Thông tin giao hàng</h4>
+
+                    
+
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <label>Họ</label>
+                            <input type="text" class="form-control" placeholder="" required="">
+                        </div> <!-- form-group end.// -->
+                        <div class="col form-group">
+                            <label>Tên</label>
+                            <input type="text" class="form-control" placeholder="" required="">
+                        </div> <!-- form-group end.// -->
+                    </div> <!-- form-row end.// -->
+
+                    <div class="form-row">
+                        <div class="col form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" placeholder="" >
+                        </div> <!-- form-group end.// -->
+                        <div class="col form-group">
+                            <label>Điện thoại</label>
+                            <input type="text" class="form-control" placeholder="">
+                        </div> <!-- form-group end.// -->
+                    </div> <!-- form-row end.// -->
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Quốc gia</label>
+                            <select id="inputState" class="form-control">
+                                <option> Choose...</option>
+                                <option>Việt Nam</option>
+                                <option>Nga</option>
+                                <option selected="">Hoa kỳ</option>
+                                <option>lào</option>
+                                <option>Hàn Quốc</option>
+                            </select>
+                        </div> <!-- form-group end.// -->
+                        <div class="form-group col-md-6">
+                            <label>Thành Phố/Tỉnh</label>
+                            <input type="text" class="form-control">
+                        </div> <!-- form-group end.// -->
+                    </div> <!-- form-row.// -->
+                    <div class="form-group">
+                        <label>Địa chỉ nhận hàng</label>
+                        <textarea class="form-control" rows="2"></textarea>
+                    </div> <!-- form-group// -->
+                    <div class="form-row">
+                        <div class="form-group col-sm-6">
+                            <label class="js-check box active">
+                                <input type="radio" name="dostavka" value="option1" checked>
+                                <h6 class="title">Thanh toán trực tiếp</h6>
+                                <p class="text-muted">Thanh toán khi nhận hàng</p>
+                            </label> <!-- js-check.// -->
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label class="js-check box">
+                                <input type="radio" name="dostavka" value="option1">
+                                <h6 class="title">Thanh toán qua thẻ</h6>
+                                <p class="text-muted">Vui lòng nhập thông tin bên dưới</p>
+                            </label> <!-- js-check.// -->
+                        </div>
+                    </div> <!-- form row.// -->
+
+                </div> <!-- card-body.// -->
+            </div>  <!-- card .// -->
+
+
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h4 class="card-title mb-4">Thanh toán qua thẻ</h4>
+                    <form role="form" style="max-width:380px;">
+                        <div class="form-group">
+                            <label for="username">Tên tài khoản</label>
+                            <input type="text" class="form-control" name="username" placeholder="Ex. John Smith" required="">
+                        </div> <!-- form-group.// -->
+
+                        <div class="form-group">
+                            <label for="cardNumber">Số tài khoản</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="cardNumber" placeholder="" required=""    >
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fab fa-cc-visa"></i> &nbsp; <i class="fab fa-cc-amex"></i> &nbsp;
+                                        <i class="fab fa-cc-mastercard"></i>
+                                    </span>
+                                </div>
+                            </div> <!-- input-group.// -->
+                        </div> <!-- form-group.// -->
+
+                        <div class="row">
+                            <div class="col-md flex-grow-0">
+                                <div class="form-group">
+                                    <label class="hidden-xs">Ngày làm thẻ</label>
+                                    <div class="form-inline" style="min-width: 220px">
+                                        <select class="form-control" style="width:100px">
+                                            <option>Tháng</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+                                            <option> Tháng - 01</option>
+
+                                        </select>
+                                        <span style="width:20px; text-align: center"> / </span>
+                                        <select class="form-control" style="width:100px">
+                                            <option>Năm</option>
+                                            <option>2018</option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label data-toggle="tooltip" title="3 digits code on back side of the card">CVV <i class="fa fa-question-circle"></i></label>
+                                    <input class="form-control" required="" type="text">
+                                </div> <!-- form-group.// -->
+                            </div>
+                        </div> <!-- row.// -->
+                        <button class="btn  btn-primary"> <a href="~/SuccessPayment/Index">Xác nhận thanh toán<i class="d-md-none icon fa fa-chevron-down"></i></a></button>
+                    </form>
+                </div> <!-- card-body.// -->
+            </div> <!-- card .// -->
+
+
+            <br><br>
+
+        </div> <!-- container .//  -->
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+
+
+
+
+    <p> <a href="@Url.Action("Index","Home")">Tiếp tục mua hàng</a></p>

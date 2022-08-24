@@ -1,0 +1,108 @@
+﻿@model List<WebsiteBanHang.Context.Category>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="pragma" css="no-cache" />
+    <meta http-equiv="cache-control" css="max-age=604800" />
+    <meta name="viewport" css="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" css="Bootstrap e-commerce html template similar to Alibaba">
+    <meta name="keywords" css="Online template, shop, theme, template, html, css, bootstrap 4">
+
+    <title>Website Bán Hàng NPT</title>
+
+    <link href="~/Content/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!-- jQuery -->
+    <script src="~/Scripts/js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
+    <!-- Bootstrap4 files-->
+    <script src="~/Scripts/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font awesome 5 -->
+    <link href="~/fonts/fontawesome/css/all.min.css" type="text/css" rel="stylesheet">
+
+    <!-- custom style -->
+    <link href="~/Content/css/ui.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" type="text/css" />
+
+    <!-- custom javascript -->
+    <script src="~/Scripts/js/script.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+    <section class="py-3 bg-light">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Category name</a></li>
+                
+            </ol>
+        </div>
+    </section>
+
+    <section class="section-content padding-y">
+        <div class="container">
+            <nav class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-3">
+
+                        <div class="card card-category">
+
+                            <div class="img-wrap col-md-12 " style="background: #ffd7d7">
+                                <img src="~/Content/images/items/@item.Avatar">
+                                <a href="@Url.Action("ProductCategory", "Category", new { @Id = item.Id }, null)"></a>
+                            </div>
+                            <div class="card-body ">
+                                <h4 class="card-title "> @Html.ActionLink(item.Name, "ProductCategory", "Category", new { @Id = item.Id }, null)</h4>
+
+                            </div>
+
+                        </div>
+
+                    </div> <!-- col.// -->
+                }
+            </nav> <!-- row.// -->
+
+
+        </div> <!-- container .//  -->
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+    <!-- ========================= SECTION SUBSCRIBE  ========================= -->
+    <section class="padding-y-lg bg-light border-top">
+        <div class="container">
+
+            <p class="pb-2 text-center">Delivering the latest product trends and industry news straight to your inbox</p>
+
+            <div class="row justify-content-md-center">
+                <div class="col-lg-4 col-sm-6">
+                    <form class="form-row">
+                        <div class="col-8">
+                            <input class="form-control" placeholder="Your Email" type="email">
+                        </div> <!-- col.// -->
+                        <div class="col-4">
+                            <button type="submit" class="btn btn-block btn-warning"> <i class="fa fa-envelope"></i> Subscribe </button>
+                        </div> <!-- col.// -->
+                    </form>
+                    <small class="form-text">We’ll never share your email address with a third-party. </small>
+                </div> <!-- col-md-6.// -->
+            </div>
+
+
+        </div>
+    </section>
+    <!-- ========================= SECTION SUBSCRIBE END// ========================= -->
+
+
+</body>
+</html>
+
